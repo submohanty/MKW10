@@ -1,12 +1,11 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+﻿; All AHK scripts start out like this
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-
+; Script used to work with Windows 10 to set brightness
 class BrightnessSetter {
-	; qwerty12 - 27/05/17
-	; https://github.com/qwerty12/AutoHotkeyScripts/tree/master/LaptopBrightnessSetter
 	static _WM_POWERBROADCAST := 0x218, _osdHwnd := 0, hPowrprofMod := DllCall("LoadLibrary", "Str", "powrprof.dll", "Ptr") 
 
 	__New() {
@@ -217,17 +216,15 @@ BrightnessSetter_new() {
 }
 BS := new BrightnessSetter()
 
-Alt & F2::BS.SetBrightness(10)
-Alt & F1::BS.SetBrightness(-10)
 
-Alt & F11::Send,{Volume_Down}
-Alt & F12::Send,{Volume_Up}
-Alt & F10:: Send {Volume_Mute}
+; Functions printed on the keyboard ::
+Alt & F1::BS.SetBrightness(-10) ; Decreases Brightness
 
-;next song
-Alt & F9:: ;the + means shift
-Send {Media_Next}
-return
+Alt & F2::BS.SetBrightness(10) ; Increases Brightness
+
+Alt & F3:: #Tab ; Opens task view (most similar to Mac)
+
+Alt & F4:: # ; Opens up your installed applications (most similar to Mac)
 
 ;previous song
 Alt & F7::
@@ -239,24 +236,18 @@ Alt & F8::
 Send {Media_Play_Pause}
 return
 
-#Space:: #Tab  ; open task view
+;next song
+Alt & F9:: 
+Send {Media_Next}
+return
 
-F19:: !F4 ; close window ( alt f4 )
+Alt & F10:: Send {Volume_Mute} ; Mutes/Unmutes Volume
 
+Alt & F11::Send,{Volume_Down} ; Decreases Volume (default value determined by system)
 
+Alt & F12::Send,{Volume_Up} ; Increases Volume (default value determined by system)
 
-F13::
-ChangeResolution(1600,900)
-Return
-
-F14::
-ChangeResolution(1024,768)
-Run C:\Users\BM\AppData\Local\Programs\dllinjector\Dll Injector.exe
-Run C:\Users\BM\Contacts\FramesJavaApp\rbxfpsunlocker.exe
-Return
-
-
-
+; Script that changes your resolution
 ChangeResolution(Screen_Width := 1920, Screen_Height := 1080, Color_Depth := 32)
 {
 	VarSetCapacity(Device_Mode,156,0)
@@ -270,10 +261,27 @@ ChangeResolution(Screen_Width := 1920, Screen_Height := 1080, Color_Depth := 32)
 }
 Return
 
+F13::
+; Currently open for changes, make an issue on GitHub for recommendations
+Return
 
-F16:: !Left ;back page
-F17:: !Right ;next page
+F14::
+; Currently open for changes, make an issue on GitHub for recommendations
+Return
 
-CapsLock:: LShift
-LShift:: LCtrl
+F15::
+; Currently open for changes, make an issue on GitHub for recommendations
+Return
+
+F17:: ; Simple change to a resolution, used for games
+ChangeResolution(1024,768) 
+Return
+
+F18:: ; Goes back to your default resolution, change this if it is not 1920x1080
+ChangeResolution(1920,1080)
+Return
+
+F19:: !F4 ; Closes Window(Alt F4)
+
+
 
