@@ -261,27 +261,31 @@ ChangeResolution(Screen_Width := 1920, Screen_Height := 1080, Color_Depth := 32)
 }
 Return
 
-F13::
-; Currently open for changes, make an issue on GitHub for recommendations
+F13:: Run C:\Windows\System32\SnippingTool.exe
 Return
 
-F14::
-; Currently open for changes, make an issue on GitHub for recommendations
+F14:: ; Currently open for changes, make an issue on GitHub
 Return
 
 F15::
-; Currently open for changes, make an issue on GitHub for recommendations
+; Currently open for changes, make an issue on GitHub
 Return
 
-F17:: ; Simple change to a resolution, used for games
-ChangeResolution(1024,768) 
+; Goes back on the browser
+F16::
+!Left
 Return
 
-F18:: ; Goes back to your default resolution, change this if it is not 1920x1080
-ChangeResolution(1920,1080)
+; Goes forward on the browser
+F17::
+!Right
+Return
+
+F18:: ; Currently open for changes, make an issue on GitHub
 Return
 
 F19:: !F4 ; Closes Window(Alt F4)
 
-
-
+; Personal thing, I like to have the PageUp and PageDown scroll up/down less
+PgUp:: Send {Up 5}
+PgDn:: Send {Down 5}
