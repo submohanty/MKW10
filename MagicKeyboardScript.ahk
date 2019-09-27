@@ -286,6 +286,3 @@ Return
 
 F19:: !F4 ; Closes Window(Alt F4)
 
-; Personal thing, I like to have the PageUp and PageDown scroll up/down less
-PgUp:: Send {Up 5}
-PgDn:: Send {Down 5}
