@@ -264,8 +264,8 @@ Return
 F13:: Run C:\Windows\System32\SnippingTool.exe
 Return
 
-F14:: ; Currently open for changes, make an issue on GitHub
-Return
+;F14:: ; Currently open for changes, make an issue on GitHub
+;Return
 
 F15::
 ; Currently open for changes, make an issue on GitHub
@@ -285,4 +285,10 @@ F18:: ; Currently open for changes, make an issue on GitHub
 Return
 
 F19:: !F4 ; Closes Window(Alt F4)
+
+F14::
+Run C:\Program Files\Sublime Text 3\sublime_text.exe
+Run C:\Users\BM\AppData\Local\Programs\Microsoft VS Code\Code.exe
+Return
+
 
