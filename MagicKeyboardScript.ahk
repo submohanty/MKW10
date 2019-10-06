@@ -264,7 +264,7 @@ Return
 F13:: Run C:\Windows\System32\SnippingTool.exe
 Return
 
-F14:: Run C:\Program Files\Sublime Text 3\sublime_text.exe
+F14:: Run C:\Program Files\Microsoft VS Code\Code.exe
 Return
 
 F15::
