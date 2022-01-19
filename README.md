@@ -1,5 +1,5 @@
 
-![Logo](https://raw.githubusercontent.com/submohanty/MKW10/master/logo.png)
+![Logo](https://m.media-amazon.com/images/I/718oX4EkcGL._AC_SX466_.jpg)
 
 
 # MKW10
@@ -9,7 +9,6 @@ A one-click program used to make your Apple Magic Keyboard functional on Windows
 This program will work with basically all Apple keyboards made after 2000.
 You can also use this program on a Macbook keyboard (with the Macbook running Windows 10 via Bootcamp/Parallells).
 ## Features
-![https://m.media-amazon.com/images/I/718oX4EkcGL._AC_SX466_.jpg](https://m.media-amazon.com/images/I/718oX4EkcGL._AC_SX466_.jpg)
 - Brightness up/down
 - Play/Pause/Next Track/Previous Track
 - All Desktops view
